@@ -31,3 +31,13 @@ export const addRegisterUserVAlidation = yup.object({
 
   gender: yup.string().trim().oneOf(["male", "female", "preferNotToSay"]),
 });
+
+export const loginUserValidationSchema = yup.object({
+  email: yup
+    .string()
+    .required()
+    .trim()
+    .email("must be a valid email address")
+    .lowercase(),
+  password: yup.string().required("password is required"),
+});

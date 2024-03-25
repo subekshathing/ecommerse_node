@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
     requied: true,
     trim: true,
   },
-  roll: {
+  role: {
     type: String,
     requied: true,
     trim: true,
